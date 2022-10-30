@@ -1,6 +1,8 @@
+import axios from 'axios'
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+
 
 const AddTask = () => {
 
@@ -11,6 +13,18 @@ const AddTask = () => {
     e.preventDefault();
     const newTask = {task,date};
     console.log("task geldi mi", newTask);
+    addNewTask(newTask)
+
+  }
+
+  const addNewTask=async(newTask)=>{
+    const url = "https://635d8b5c07076ac24f3f23db.mockapi.io/api/task"
+    try {
+      await axios.post(url,newTask)
+      
+    } catch (error) {
+      console.log(error);
+    }
 
   }
 
