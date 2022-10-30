@@ -11,9 +11,10 @@ const TaskList = ({task, getTask}) => {
     } catch (error) {
       console.log(error)
     }
+    getTask()
   }
 
-  getTask()
+  
 
   return (
     <div>
