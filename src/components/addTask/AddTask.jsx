@@ -6,8 +6,16 @@ const AddTask = () => {
 
   const [task, setTask] = useState("")
   const [date, setDate] = useState("")
+
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+    const newTask = {task,date};
+    console.log("task geldi mi", newTask);
+
+  }
+
   return (
-    <div> 
+    <div onSubmit={handleSubmit}> 
     <Form>
     <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Label>Task</Form.Label>
