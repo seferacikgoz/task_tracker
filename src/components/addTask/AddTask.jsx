@@ -14,6 +14,8 @@ const AddTask = ({getTask}) => {
     const newTask = {task,date};
     console.log("task geldi mi", newTask);
     addNewTask(newTask)
+    setTask("")
+    setDate("")
 
   }
 
