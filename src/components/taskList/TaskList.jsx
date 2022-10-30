@@ -7,7 +7,8 @@ const TaskList = ({task}) => {
       {task.map((item) => {
         const {id, task, date} = item;
         return(
-          <div key={id}
+          <div 
+          key={id}
           className='mt-2 d-flex justify-content-between bg-secondary rounded-5 p-2'>
             <div>
               <h4>{task}</h4>
