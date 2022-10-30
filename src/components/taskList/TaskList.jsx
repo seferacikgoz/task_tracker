@@ -9,7 +9,6 @@ const TaskList = ({task, getTask}) => {
     try {
       await axios.delete(`${url}/${id}`)
     } catch (error) {
-      console.log(error)
     }
     getTask()
   }

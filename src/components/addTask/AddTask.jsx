@@ -28,9 +28,10 @@ const AddTask = ({getTask}) => {
       console.log(error);
     }
 
+    getTask();
   }
 
-  getTask();
+  
 
   return (
     <div onSubmit={handleSubmit}> 
