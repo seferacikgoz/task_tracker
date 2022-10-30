@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
 
-const AddTask = () => {
+const AddTask = ({getTask}) => {
 
   const [task, setTask] = useState("")
   const [date, setDate] = useState("")
@@ -28,6 +28,8 @@ const AddTask = () => {
 
   }
 
+  getTask();
+
   return (
     <div onSubmit={handleSubmit}> 
     <Form>
@@ -43,10 +45,13 @@ const AddTask = () => {
       <Form.Control type="date"
       onChange={(e)=> setDate(e.target.value)}/>
     </Form.Group>
+    <div className='text-center'>
     <Button variant="primary w-50" type="submit">
       SAVE
     </Button>
-  </Form></div>
+    </div>
+  </Form>
+  </div>
   )
 }
 
